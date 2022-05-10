@@ -411,13 +411,15 @@ body.menu-expandido > :not(nav){
 }
 /* ====================Contato================ */
 #contato{
-    text-align: left;
+    text-align: center;
 }
 #contato h2{
     display: flex;
     margin-bottom: 40px;
     color: #212529;
     text-decoration: none;
+    margin-left: 80px;
+    text-align: center;
 }
 
 
@@ -431,20 +433,22 @@ body.menu-expandido > :not(nav){
 }
 
 .endereco{
-    margin-left: 10px;
+    margin-right: 10px;
     color: var(--secundary-color);
     font-weight: 600;
 }
 #contato .email{
     display: flex;
+    margin-left: 60px;
 }
 .email p{
-    margin-left: 10px;
+    
     font-weight: 600;
     color: #212529;
 }
 .Mapa{
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 #contato .button{
     
@@ -471,6 +475,7 @@ body.menu-expandido > :not(nav){
     gap:1.6rem;
   
     margin-right:auto;
+    margin-left: 29px;
     
 
     
@@ -478,5 +483,15 @@ body.menu-expandido > :not(nav){
 }
 /* ==================footer=========================== */
 #rodape{
-    background: #c45c01;
+    background-color:#F27405;
+}
+#rodape img{
+    padding-top: 20px;
+    width: 50px;
+}
+#rodape p{
+    color: #ffffff;
+    padding-bottom: 30px;
+    font-weight: 600;
+    
 }
