@@ -401,9 +401,9 @@ body.menu-expandido > :not(nav){
 }
 .app{
     margin-top: 50px;
-    width: 500px;
+    width: 400px;
     display: block;
-    margin-inline:-130px;
+    margin-inline:-80px;
     object-position: -0px;
 }
 /* ====================Contato================ */
