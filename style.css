@@ -236,10 +236,10 @@ nav.scroll button path {
 
  /*MENU_EXPANDIDO===========================================*/ 
  .open-menu{
-    margin-left: 65px;
+    margin-left: 70px;
 }
 .close-menu{
-  margin-right: 35px;
+  margin-right: 30px;
 }
 
  body.menu-expandido{
