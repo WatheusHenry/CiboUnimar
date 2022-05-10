@@ -403,7 +403,7 @@ body.menu-expandido > :not(nav){
     margin-top: 50px;
     width: 400px;
     display: block;
-    margin-inline:-80px;
+    margin-inline:-70px;
     object-position: -0px;
 }
 /* ====================Contato================ */
