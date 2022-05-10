@@ -260,7 +260,7 @@ body.menu-expandido > :not(nav){
  }
 
  
- body.menu-expandido .menu,.logo,
+ body.menu-expandido .menu,
  body.menu-expandido .close-menu{
      opacity: 1;
      visibility: visible;
