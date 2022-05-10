@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+    font-size: 62.5%;
+    --primary-color:#F27405;
+    --secundary-color:#212529;
+    --navheight:7.2rem;
+    --cornav:#fcdcc0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  
+}
+
+body{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    text-align:center;
+    overflow: overlay;
+    background-color: rgb(255, 247, 240);
+}
+
+
+.wrapper{
+    width: 37.5rem;
+    margin-inline: auto;
+    padding-inline: 2.6rem;
+}
+
+ul{
+    list-style: none;
+
+}
+
+section{
+    padding-block: 10rem;
+}
+
+section header h4{
+    font-weight: 700;
+    font-size: 2rem;
+    color: #e4662b;
+    margin-bottom: 1.6rem;
+}
+
+section header h2{
+    font-size: 40px;
+    line-height: 52px;
+
+
+    text-align: center;
+
+    color: #212529;
+    
+}
+
+
+section header h1{
+    font-size: 3.4rem;
+    line-height: 130%;
+    
+    color: #212529;
+}
+/*==================header================================*/
+
+#home::before{
+    content: '';
+    width: 100%;
+    height:calc(108rem + 7.2rem);
+    background-color:var(--cornav);
+    display: block;
+
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#home{
+    padding-top:calc(4.1rem + 7.2rem);
+    
+}
+
+#home h4{
+    font-weight: 700;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1.6rem;
+}
+#home h1{
+    font-size: 3.4rem;
+    line-height: 130%;
+    margin-bottom: 2.4rem;
+    color: #212529;
+}
+#home p{
+    font-size: 1.8rem;
+    line-height: 150%;
+    font-weight: 400;
+    margin-bottom: 3.2rem;
+}
+
+
+#home .button{
+    background: var(--primary-color);
+    
+    border: none;
+    border-radius: 4rem;
+
+    margin-bottom: 6rem;
+
+    height: 6.2rem;
+    width: 26.3rem;
+
+    color: white;
+    font-size: 2rem;
+    font-family: 'DM Sans';
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1.6rem;
+  
+    margin-right:auto;
+    margin-left:auto;
+
+    
+    text-decoration: none;
+}
+
+#home a p{
+    margin-top:30px ;
+    font-family: 'DM Sans';
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+
+.button:hover{
+    background: #c45c01;
+}
+.card-info{
+    width: 32.7rem;
+    padding-block: 4rem;
+    margin-inline: auto;
+    padding: 7px;
+    
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #e6e5e5;
+    border-radius: 0.6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.stat h3{
+    font-size: 4.8rem;
+    color: var(--secundary-color);
+    line-height: 130%;
+    margin-bottom: .4rem;
+}
+
+.stat p{
+    line-height: 150%;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    color: var(--primary-color);
+}
+.ultimo{
+    padding-bottom: 10px;
+}
+
+header img{
+    
+   width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+    object-position: -2px; 
+
+}
+
+/*==============NAVIGATION==================*/
+nav a img{
+    height: 60px;
+}
+nav{
+     display: flex;
+    
+     height: var(--navheight);
+    
+     position: fixed;
+     top:0px;
+     width: 100vw;
+     
+     z-index: 100 ;
+}
+nav .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav.scroll{
+background-color:var(--primary-color);
+
+
+ }
+
+nav.scroll svg:nth-child(1) path {
+    fill: rgb(255, 255, 255);
+}
+  
+nav.scroll button path {
+    stroke: rgb(255, 255, 255);
+}
+ nav button{
+     background: none;
+     border: none;
+     cursor: pointer;
+     width: 20px;
+ }
+
+
+ /*MENU_EXPANDIDO===========================================*/ 
+ .open-menu{
+    margin-left: 65px;
+}
+.close-menu{
+  margin-right: 35px;
+}
+
+ body.menu-expandido{
+    overflow: hidden;
+}
+
+body.menu-expandido > :not(nav){
+    visibility: hidden;
+}
+
+.menu,
+.close-menu,
+ body.menu-expandido .open-menu{
+     opacity: 0;
+     visibility: hidden;
+ }
+
+ 
+ body.menu-expandido .menu,
+ body.menu-expandido .close-menu{
+     opacity: 1;
+     visibility: visible;
+ }
+
+
+.menu{
+    transform: translateX(100%);
+}
+
+ body.menu-expandido .menu{
+     position:fixed;
+     top:0;
+     left:0;
+     background-color: var(--primary-color);
+
+     width: 100vw;
+     height: 100vh;
+
+    padding-top: var(--navheight);
+
+    transition:transform 400ms;
+    transform: translateX(0);
+ }
+
+ 
+ .menu ul:nth-child(1){
+     display: flex;
+     flex-direction: column;
+     gap: 4.8rem;
+
+     margin-top:6rem ;
+
+     font-weight: 700;
+     font-size: 2.4rem;
+     line-height: 3.1rem;
+ }
+
+ .menu ul li a{
+    color: white;
+    text-decoration: none;
+ }
+
+.menu .button{
+    background: #ffffff;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #F27405;
+
+    display:inline-block ;
+    padding: 16px 32px;
+
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+}
+
+ .social-links{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 3.2rem;
+    
+ }
+ .social-links a{
+    background:var(--primary-color);
+ }
+
+ body.menu-expandido .logo,
+ body.menu-expandido button{
+     position: relative;
+     z-index: 100; 
+
+ }
+ body.menu-expanded .logo path {
+    fill: white;
+  }
+  
+  body.menu-expanded button path {
+    stroke: white;
+  }
+
+
+/*=====================SERVICES=======================================*/
+#services header h3{
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--primary-color);
+    letter-spacing: 0.08em;
+    margin-bottom: 1.6rem;
+}
+#services header h2{
+    font-size: 40px;
+    line-height: 52px;
+
+
+    text-align: center;
+
+    color: #212529;
+    margin-bottom:6rem ;
+}
+#services .cards{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+#services .card{
+    padding: 2.4rem;
+    text-align: left;
+    border: 0.5px solid #d4d4d4;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+#services .card h3{
+    margin-block: 1.6rem;
+    color: #212529;
+}
+
+/* =======================About========================  */
+
+#about{
+    text-align: left;
+    background-color: wheat;
+}
+#about header h2{
+    margin-bottom: 2.4rem;
+    text-align: left;
+
+}
+
+#about p{
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.app{
+    margin-top: 50px;
+    width: 500px;
+    display: block;
+    margin-inline:-130px;
+    object-position: -0px;
+}
+/* ====================Contato================ */
+#contato{
+    text-align: left;
+}
+#contato h2{
+    display: flex;
+    margin-bottom: 40px;
+    color: #212529;
+    text-decoration: none;
+}
+
+
+#contato .mapa{
+    display: inline-flex;
+}
+
+.mapa {
+  
+   text-decoration: none;
+}
+
+.endereco{
+    margin-left: 10px;
+    color: var(--secundary-color);
+    font-weight: 600;
+}
+#contato .email{
+    display: flex;
+}
+.email p{
+    margin-left: 10px;
+    font-weight: 600;
+    color: #212529;
+}
+.Mapa{
+    margin-bottom: 10px;
+}
+#contato .button{
+    
+    background: var(--primary-color);
+    
+    border: none;
+    border-radius: 4rem;
+
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+
+    height: 6.2rem;
+    width: 26.3rem;
+
+    color: white;
+    font-size: 2rem;
+    font-family: 'DM Sans';
+    font-weight: 700;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1.6rem;
+  
+    margin-right:auto;
+    
+
+    
+    text-decoration: none;
+}
