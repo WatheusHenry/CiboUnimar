@@ -163,7 +163,7 @@ section header h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 6rem;
+    gap: 5rem;
 }
 
 .stat h3{
@@ -186,7 +186,7 @@ section header h1{
 
 header img{
     
-   width: 26.4rem;
+    width: 26.4rem;
     display: block;
     margin-inline: auto;
     object-position: -2px; 
@@ -196,6 +196,8 @@ header img{
 /*==============NAVIGATION==================*/
 nav a img{
     height: 60px;
+    width: 60px;
+    
 }
 nav{
      display: flex;
@@ -252,21 +254,22 @@ body.menu-expandido > :not(nav){
 
 .menu,
 .close-menu,
- body.menu-expandido .open-menu{
+ body.menu-expandido .open-menu {
      opacity: 0;
      visibility: hidden;
  }
 
  
- body.menu-expandido .menu,
+ body.menu-expandido .menu,.logo,
  body.menu-expandido .close-menu{
      opacity: 1;
      visibility: visible;
+     
  }
 
 
 .menu{
-    transform: translateX(100%);
+    transform: translateY(-90%);
 }
 
  body.menu-expandido .menu{
@@ -280,8 +283,8 @@ body.menu-expandido > :not(nav){
 
     padding-top: var(--navheight);
 
-    transition:transform 400ms;
-    transform: translateX(0);
+    transition:transform 500ms;
+    transform: translateY(0%);
  }
 
  
@@ -400,11 +403,11 @@ body.menu-expandido > :not(nav){
     font-weight: 400;
 }
 .app{
-    margin-top: 50px;
+    margin-top: 60px;
     width: 400px;
     display: block;
     margin-inline:-70px;
-    object-position: -0px;
+    object-position: 0px;
 }
 /* ====================Contato================ */
 #contato{
@@ -472,4 +475,8 @@ body.menu-expandido > :not(nav){
 
     
     text-decoration: none;
+}
+/* ==================footer=========================== */
+#rodape{
+    background: #c45c01;
 }
